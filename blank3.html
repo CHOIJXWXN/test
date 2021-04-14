@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MEDIA</title>
+    <link rel="stylesheet" href="blank.css">
+    <script>
+      function LinksetColor(color) {
+        var A=document.querySelectorAll('a');
+        var i=0;
+        while(i<A.length){
+          A[i].style.color=color;
+          i=i+1;
+        }
+      }
+      function BodysetColor(color) {
+        var B=document.querySelector('body');
+        B.style.color=color;
+      };
+      function BodysetBackgroundColor(color) {
+        var B=document.querySelector('body');
+        B.style.backgroundColor=color;
+      };
+      function darkmode(tag){
+        if(tag.value==='night') {
+          BodysetColor('white');
+          BodysetBackgroundColor('black');
+          LinksetColor('powderblue');
+          tag.value='day';
+        }
+        else {
+          BodysetColor('black');
+          BodysetBackgroundColor('white');
+          LinksetColor('darkblue');
+          tag.value='night';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>COOKIERUN KINGDOM</h1>
+    <div id="index">
+      <ol>
+        <li><a href="blank1.html">CHARACTERS</a></li>
+        <li><a href="blank2.html">STORY</a></li>
+        <li><a href="blank3.html">MEDIA</a></li>
+      </ol>
+      <div id="content">
+        <h2 style="margin-bottom:0">MEDIA</h2>
+        <div id="list">
+          <div>
+            <li>공식 OST '너를 찾을게' MV</li>
+            <iframe src="https://www.youtube.com/embed/tFLz40XFwkQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>미리보기 시리즈 - 전투편</li>
+            <iframe src="https://www.youtube.com/embed/KPztqYEvS20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>미리보기 시리즈 - 캐릭터편</li>
+            <iframe src="https://www.youtube.com/embed/18k8Q7eWPL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div>
+            <li>최후의 전투</li>
+            <iframe src="https://www.youtube.com/embed/c8zQXKk7DeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>검은가루 전쟁</li>
+            <iframe src="https://www.youtube.com/embed/the4S9AGHGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>영웅과 어둠의 시대</li>
+            <iframe src="https://www.youtube.com/embed/ENEGexiBsrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <input type="button" value="night" onclick="darkmode(this)">
+      </div>
+    </div>
+  </body>
+</html>

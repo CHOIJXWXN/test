@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CHARACTERS</title>
+    <link rel="stylesheet" href="blank.css">
+    <script>
+      function LinksetColor(color) {
+        var A=document.querySelectorAll('a');
+        var i=0;
+        while(i<A.length){
+          A[i].style.color=color;
+          i=i+1;
+        }
+      }
+      function BodysetColor(color) {
+        var B=document.querySelector('body');
+        B.style.color=color;
+      };
+      function BodysetBackgroundColor(color) {
+        var B=document.querySelector('body');
+        B.style.backgroundColor=color;
+      };
+      function darkmode(tag){
+        if(tag.value==='night') {
+          BodysetColor('white');
+          BodysetBackgroundColor('black');
+          LinksetColor('powderblue');
+          tag.value='day';
+        }
+        else {
+          BodysetColor('black');
+          BodysetBackgroundColor('white');
+          LinksetColor('darkblue');
+          tag.value='night';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>COOKIERUN KINGDOM</h1>
+    <div id="index">
+      <ol>
+        <li><a href="blank1.html">CHARACTERS</a></li>
+        <li><a href="blank2.html">STORY</a></li>
+        <li><a href="blank3.html">MEDIA</a></li>
+      </ol>
+      <div id="content">
+        <h2>CHARACTERS</h2>
+        <p>
+          영웅쿠키
+          <ul>
+            <li>퓨어바닐라쿠키</li>
+            <img src="pure-vanilla-cookie.png">
+            <li>홀리베리쿠키</li>
+            <img src="hollyberry-cookie.png">
+            <li>골드치즈쿠키</li>
+            <img src="golden-cheese-cookie.png">
+            <li>다크카카오쿠키</li>
+            <img src="dark-cacao-cookie.png">
+            <li>세인트릴리쿠키</li>
+            <img src="saint-lily-cookie.png">
+          </ul>
+        </p>
+      </div>
+      <div class="box">
+        <input type="button" value="night" onclick="darkmode(this)">
+      </div>
+      </div>
+  </body>
+</html>

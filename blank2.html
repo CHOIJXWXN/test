@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>STORY</title>
+    <link rel="stylesheet" href="blank.css">
+    <script>
+      function LinksetColor(color) {
+        var A=document.querySelectorAll('a');
+        var i=0;
+        while(i<A.length){
+          A[i].style.color=color;
+          i=i+1;
+        }
+      }
+      function BodysetColor(color) {
+        var B=document.querySelector('body');
+        B.style.color=color;
+      };
+      function BodysetBackgroundColor(color) {
+        var B=document.querySelector('body');
+        B.style.backgroundColor=color;
+      };
+      function darkmode(tag){
+        if(tag.value==='night') {
+          BodysetColor('white');
+          BodysetBackgroundColor('black');
+          LinksetColor('powderblue');
+          tag.value='day';
+        }
+        else {
+          BodysetColor('black');
+          BodysetBackgroundColor('white');
+          LinksetColor('darkblue');
+          tag.value='night';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>COOKIERUN KINGDOM</h1>
+    <div id="index">
+      <ol>
+        <li><a href="blank1.html">CHARACTERS</a></li>
+        <li><a href="blank2.html">STORY</a></li>
+        <li><a href="blank3.html">MEDIA</a></li>
+      </ol>
+      <div id="content">
+        <h2>STORY</h2>
+        <p>
+          멀고 먼 옛날…<br>
+          철과 불과 혼돈의 시대의 열기가 가라앉고<br>
+          마녀들이 구워낸 달콤하고 바삭한 피조물들이<br>
+          세상에 가득하니 그 중에서도 가장 빛나고 고결한 <strong>‘소울 잼’</strong>을 지닌<br>
+          다섯 쿠키들의 등장은 마치 구원과도 같았다.</p>
+        <p style="margin-bottom:30px">
+          고귀한 지혜와 강렬한 힘에<br>
+          쿠키들이 모여들고<br>
+          영웅들은 왕이 되어<br>
+          쿠키 문명은 대 부흥의 시대를 맞는다.</p>
+        <p>
+          하지만 찬란했던 시절도 잠시<br>
+          어둠을 자처하는 자의 등장으로<br>
+          땅엔 어둠이 스며들고 하늘엔 악이 창궐해<br>
+          온 땅에 혼돈의 그림자가 드리우기 시작하는데<br>
+          이에 평화를 수호하는<br>
+          다섯 쿠키들이 마침내 일어서고<br>
+          해질녘의 어느 날,<br>
+          드디어 쿠키들의 운명이 걸린<br>
+          최후의 전쟁이 시작된다.<br><br>
+          <a href="https://www.cookierun-kingdom.com/ko/" title="쿠키런: 킹덤">&gt;&gt;COOKIERUN KINGDOM START</a></p>
+      </div>
+      <div class="box">
+        <input type="button" value="night" onclick="darkmode(this)">
+      </div>
+      </div>
+  </body>
+</html>
